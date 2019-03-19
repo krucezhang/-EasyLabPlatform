@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{316698B0-D5C4-4434-AB40-6EE93D340B6A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyLab.WS.DeviceAgent</RootNamespace>
+    <AssemblyName>EasyLab.WS.DeviceAgent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AttributeRouting">
+      <HintPath>..\..\lib\AttributeRouting.Core.3.5.6\lib\net40\AttributeRouting.dll</HintPath>
+    </Reference>
+    <Reference Include="AttributeRouting.Web.Http">
+      <HintPath>..\..\lib\AttributeRouting.Core.Http.3.5.6\lib\net40\AttributeRouting.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="AttributeRouting.Web.Http.SelfHost">
+      <HintPath>..\..\lib\AttributeRouting.WebApi.Hosted.3.5.6\lib\net40\AttributeRouting.Web.Http.SelfHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\lib\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\lib\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Newtonsoft.Json.4.5.11\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.0.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NLog.2.0.1.2\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.SelfHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttributeRoutingConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\AuditLogsController.cs" />
+    <Compile Include="Controllers\DeviceSettingsController.cs" />
+    <Compile Include="Controllers\LabInstrumentsController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\ReserveQueueController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="DbContext\SqlCeDbContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DependencyResolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DeviceAgentService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeviceAgentService.Designer.cs">
+      <DependentUpon>DeviceAgentService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EasyLabRs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EasyLabRs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Constants.cs" />
+    <Compile Include="Models\EasyLabExceptionFilterAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\LabInSyncSettings.cs" />
+    <Compile Include="Models\LogHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\SyncInstantiation.cs" />
+    <Compile Include="Models\TimerTypes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="DeviceAgentInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DeviceAgentInstaller.Designer.cs">
+      <DependentUpon>DeviceAgentInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Install_DeviceAgent.bat" />
+    <None Include="packages.config" />
+    <None Include="Uninstall_DeviceAgent.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeviceAgentService.resx">
+      <DependentUpon>DeviceAgentService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyLabRs.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EasyLabRs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceAgentInstaller.resx">
+      <DependentUpon>DeviceAgentInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyLab.Server.Business.Interface\EasyLab.Server.Business.Interface.csproj">
+      <Project>{aec4c007-6371-4639-b314-7a38329d24a7}</Project>
+      <Name>EasyLab.Server.Business.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Business\EasyLab.Server.Business.csproj">
+      <Project>{4db864c7-3117-48c6-b124-283f12782467}</Project>
+      <Name>EasyLab.Server.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Common\EasyLab.Server.Common.csproj">
+      <Project>{f8c97674-58eb-4616-a2fd-b999b7ab4185}</Project>
+      <Name>EasyLab.Server.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Conversions\EasyLab.Server.Conversions.csproj">
+      <Project>{9f741889-da0d-4d36-94b0-911eb33900e6}</Project>
+      <Name>EasyLab.Server.Conversions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Data.Persistence\EasyLab.Server.Data.Persistence.csproj">
+      <Project>{51fe758e-1725-4237-b61a-e09e466696d9}</Project>
+      <Name>EasyLab.Server.Data.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Data\EasyLab.Server.Data.csproj">
+      <Project>{83f36a0a-c3eb-4281-b179-e5d6f57538dd}</Project>
+      <Name>EasyLab.Server.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.DTOs\EasyLab.Server.DTOs.csproj">
+      <Project>{f7a3ac4b-ad9c-4acd-9d7d-4f2da2a8a649}</Project>
+      <Name>EasyLab.Server.DTOs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Repository.Interface\EasyLab.Server.Repository.Interface.csproj">
+      <Project>{247d9d2d-6de6-48f8-b021-37a61dbb3931}</Project>
+      <Name>EasyLab.Server.Repository.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EasyLab.Server.Resources\EasyLab.Server.Resources.csproj">
+      <Project>{d59fb863-c8f2-408b-80f9-21477741880d}</Project>
+      <Name>EasyLab.Server.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>SET PKG="bin"
+SET FOLDER=%25date:~0,10%25
+SET FOLDER=%25FOLDER:/=%25
+SET WORKSPACE=%25cd:~0,2%25\EasyLab_v1.0.1\%25FOLDER%25
+SET EasyLabDeviceAgent=%25WORKSPACE%25\EasyLabDeviceAgent
+SET TARGET=%25EasyLabDeviceAgent%25\%25PKG%25
+
+rmdir /S/Q "%25TARGET%25"
+xcopy /Y "EasyLab.WS.DeviceAgent.exe" "%25TARGET%25\"
+xcopy /Y "EasyLab.WS.DeviceAgent.exe.config" "%25TARGET%25\"
+xcopy /Y "*.bat" "%25EasyLabDeviceAgent%25\"
+xcopy /Y "*.dll" "%25TARGET%25\"
+xcopy /Y "readme.txt"  "%25EasyLabDeviceAgent%25"
+xcopy /Y "$(SolutionDir)\..\lib\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll" "%25TARGET%25\"
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
